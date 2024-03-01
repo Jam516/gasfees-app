@@ -67,6 +67,14 @@ export function DataTable<TData, TValue>({
         getFacetedUniqueValues: getFacetedUniqueValues(),
     })
 
+    // Function to calculate background color based on cell value
+    const getBackgroundColor = (value: number) => {
+        const normalizedValue = Math.min(value, 1);
+        const lightness = 100 - 40 * normalizedValue;
+        return `hsl(240, 100%, ${lightness}%)`;
+    }
+
+
     return (
         <div className="space-y-4">
             <DataTableToolbar table={table} />
@@ -97,14 +105,20 @@ export function DataTable<TData, TValue>({
                                     key={row.id}
                                     data-state={row.getIsSelected() && "selected"}
                                 >
-                                    {row.getVisibleCells().map((cell) => (
-                                        <TableCell key={cell.id}>
-                                            {flexRender(
-                                                cell.column.columnDef.cell,
-                                                cell.getContext()
-                                            )}
-                                        </TableCell>
-                                    ))}
+                                    {row.getVisibleCells().map((cell) => {
+                                        // Determine background color based on cell value
+                                        const bgColor = getBackgroundColor(Number(cell.getValue()));
+                                        console.log('cell value')
+                                        console.log(Number(cell.getValue()))
+                                        return (
+                                            <TableCell key={cell.id} style={{ backgroundColor: bgColor }}>
+                                                {flexRender(
+                                                    cell.column.columnDef.cell,
+                                                    cell.getContext()
+                                                )}
+                                            </TableCell>
+                                        )
+                                    })}
                                 </TableRow>
                             ))
                         ) : (
