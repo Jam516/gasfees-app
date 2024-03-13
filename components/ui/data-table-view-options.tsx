@@ -49,7 +49,7 @@ export function DataTableViewOptions<TData>({
     const { width } = useWindowSize();
     const isMediumScreenOrLarger = (width ?? 0) >= 768;
 
-    const columnsToHideOnSmallScreens = ['category', 'usdc_transfer_fee_usd', 'eth_transfer_fee_usd'];
+    const columnsToHideOnSmallScreens = ['category', 'seaport_trade_fee_usd', 'eth_transfer_fee_usd'];
 
     useEffect(() => {
         table.getAllColumns().forEach(column => {

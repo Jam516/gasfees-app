@@ -69,7 +69,7 @@ export function DataTable<TData, TValue>({
 
     // Function to calculate background color based on cell value
     const getBackgroundColor = (value: number) => {
-        const normalizedValue = Math.min(value, 1);
+        const normalizedValue = Math.min(value, 5) / 5;
         const lightness = 100 - 40 * normalizedValue;
         return `hsl(240, 100%, ${lightness}%)`;
     }
@@ -108,8 +108,8 @@ export function DataTable<TData, TValue>({
                                     {row.getVisibleCells().map((cell) => {
                                         // Determine background color based on cell value
                                         const bgColor = getBackgroundColor(Number(cell.getValue()));
-                                        console.log('cell value')
-                                        console.log(Number(cell.getValue()))
+                                        // console.log('cell value')
+                                        // console.log(Number(cell.getValue()))
                                         return (
                                             <TableCell key={cell.id} style={{ backgroundColor: bgColor }}>
                                                 {flexRender(

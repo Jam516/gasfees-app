@@ -24,7 +24,7 @@ export const columns: ColumnDef<Action>[] = [
     {
         accessorKey: "uniswap_trade_fee_usd",
         header: ({ column }) => (
-            <DataTableColumnHeader column={column} title="DEX Swap" />
+            <DataTableColumnHeader column={column} title="Uniswap Swap" />
         ),
         cell: ({ row }) => {
             const amount = parseFloat(row.getValue("uniswap_trade_fee_usd"))
@@ -38,7 +38,7 @@ export const columns: ColumnDef<Action>[] = [
     {
         accessorKey: "seaport_trade_fee_usd",
         header: ({ column }) => (
-            <DataTableColumnHeader column={column} title="NFT Trade" />
+            <DataTableColumnHeader column={column} title="Seaport Trade" />
         ),
         cell: ({ row }) => {
             const amount = parseFloat(row.getValue("seaport_trade_fee_usd"))
