@@ -27,10 +27,11 @@ export const columns: ColumnDef<Action>[] = [
             <DataTableColumnHeader column={column} title="Uniswap Swap" />
         ),
         cell: ({ row }) => {
-            const amount = parseFloat(row.getValue("uniswap_trade_fee_usd"))
+            const amount = parseFloat(row.getValue("uniswap_trade_fee_usd"));
+            const displayValue = amount === 0 ? '-' : amount.toFixed(4);
             return (
                 <div className="max-w-[500px] truncate font-medium">
-                    ${amount.toFixed(4)}
+                    ${displayValue}
                 </div>
             )
         },
@@ -41,10 +42,11 @@ export const columns: ColumnDef<Action>[] = [
             <DataTableColumnHeader column={column} title="Seaport Trade" />
         ),
         cell: ({ row }) => {
-            const amount = parseFloat(row.getValue("seaport_trade_fee_usd"))
+            const amount = parseFloat(row.getValue("seaport_trade_fee_usd"));
+            const displayValue = amount === 0 ? '-' : amount.toFixed(4);
             return (
                 <div className="max-w-[500px] truncate font-medium">
-                    ${amount.toFixed(4)}
+                    ${displayValue}
                 </div>
             )
         },
@@ -55,10 +57,11 @@ export const columns: ColumnDef<Action>[] = [
             <DataTableColumnHeader column={column} title="USDC Transfer" />
         ),
         cell: ({ row }) => {
-            const amount = parseFloat(row.getValue("usdc_transfer_fee_usd"))
+            const amount = parseFloat(row.getValue("usdc_transfer_fee_usd"));
+            const displayValue = amount === 0 ? '-' : amount.toFixed(4);
             return (
                 <div className="max-w-[500px] truncate font-medium">
-                    ${amount.toFixed(4)}
+                    ${displayValue}
                 </div>
             )
         },
@@ -69,10 +72,11 @@ export const columns: ColumnDef<Action>[] = [
             <DataTableColumnHeader column={column} title="ETH Transfer" />
         ),
         cell: ({ row }) => {
-            const amount = parseFloat(row.getValue("eth_transfer_fee_usd"))
+            const amount = parseFloat(row.getValue("eth_transfer_fee_usd"));
+            const displayValue = amount === 0 ? '-' : amount.toFixed(4);
             return (
                 <div className="max-w-[500px] truncate font-medium">
-                    ${amount.toFixed(4)}
+                    ${displayValue}
                 </div>
             )
         },
