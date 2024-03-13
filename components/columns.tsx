@@ -30,7 +30,7 @@ export const columns: ColumnDef<Action>[] = [
             const amount = parseFloat(row.getValue("uniswap_trade_fee_usd"))
             return (
                 <div className="max-w-[500px] truncate font-medium">
-                    ${amount.toFixed(2)}
+                    ${amount.toFixed(4)}
                 </div>
             )
         },
@@ -44,7 +44,7 @@ export const columns: ColumnDef<Action>[] = [
             const amount = parseFloat(row.getValue("seaport_trade_fee_usd"))
             return (
                 <div className="max-w-[500px] truncate font-medium">
-                    ${amount.toFixed(2)}
+                    ${amount.toFixed(4)}
                 </div>
             )
         },
@@ -58,7 +58,7 @@ export const columns: ColumnDef<Action>[] = [
             const amount = parseFloat(row.getValue("usdc_transfer_fee_usd"))
             return (
                 <div className="max-w-[500px] truncate font-medium">
-                    ${amount.toFixed(2)}
+                    ${amount.toFixed(4)}
                 </div>
             )
         },
@@ -72,7 +72,7 @@ export const columns: ColumnDef<Action>[] = [
             const amount = parseFloat(row.getValue("eth_transfer_fee_usd"))
             return (
                 <div className="max-w-[500px] truncate font-medium">
-                    ${amount.toFixed(2)}
+                    ${amount.toFixed(4)}
                 </div>
             )
         },
