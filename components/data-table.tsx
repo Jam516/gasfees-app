@@ -70,7 +70,7 @@ export function DataTable<TData, TValue>({
     // Function to calculate background color based on cell value
     const getBackgroundColor = (value: number) => {
         const normalizedValue = Math.min(value, 5) / 5;
-        const lightness = 100 - 40 * normalizedValue;
+        const lightness = 100 - 30 * normalizedValue;
         return `hsl(240, 100%, ${lightness}%)`;
     }
 
