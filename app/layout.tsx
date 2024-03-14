@@ -28,11 +28,20 @@ export const metadata: Metadata = {
     title: "GasFees.io",
     description: "Gas Cost Data",
     siteName: "GasFees.io",
+    images: [
+      {
+        url: "https://i.imgur.com/1IIQMq8.png",
+        width: 1200,
+        height: 630,
+        alt: "GasFees.io",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "GasFees.io",
     description: "The most accurate gas cost tracker",
+    images: ["https://i.imgur.com/1IIQMq8.png"],
     creator: "@0xKofi",
   },
 }
