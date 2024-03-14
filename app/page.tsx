@@ -31,7 +31,7 @@ function AboutBlock() {
             <div className="flex flex-col items-left">
                 <h2 className="font-bold text-sm">How are these fees calculated?</h2>
                 <p className="pb-4 text-sm">The median gas price (past 24h) is combined with the median gas used to perform different transaction types.</p>
-                <p className="pb-4 text-sm">If EIP1559 transactions are supported, a consumer-level gas setting is assumed .i.e priority fees are set to almost 0.</p>
+                <p className="pb-4 text-sm">If EIP1559 transactions are supported, a consumer-level gas setting is assumed .i.e priority fees are set to almost 0 and the median base fee per gas is combined with median gas used.</p>
             </div>
         </div>
     )
