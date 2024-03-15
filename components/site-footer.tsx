@@ -11,7 +11,7 @@ export function SiteFooter() {
                         </p>
                         <a
 
-                            href="https://www.dune.com/"
+                            href="https://dune.com/product/api"
                             target="_blank"
                         >
                             <img src="/dune-icon.png" alt="Dune Logo" className="h-[20px]" />
