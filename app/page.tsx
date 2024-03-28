@@ -31,6 +31,7 @@ function AboutBlock() {
             <div className="flex flex-col items-left">
                 <h2 className="font-bold text-sm">How are these fees calculated?</h2>
                 <p className="pb-4 text-sm">The median cost of performing different transaction types is calculated for the past 24 hours.</p>
+                <p className="pb-4 text-sm">A dynamic filter is used to select transactions where a &quot;consumer level&quot; priority fee was paid so that bots do not skew the results.</p>
             </div>
         </div>
     )
