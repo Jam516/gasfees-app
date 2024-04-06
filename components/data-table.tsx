@@ -114,7 +114,7 @@ export function DataTable<TData, TValue>({
                                         // Determine background color based on cell value
                                         const bgColor = getBackgroundColor(Number(cell.getValue()));
                                         return (
-                                            <TableCell key={cell.id} style={{ backgroundColor: bgColor }}>
+                                            <TableCell key={cell.id} style={{ backgroundColor: bgColor }} className="md:text-base">
                                                 {index === 0 && link_names ? (
                                                     <Link href={`/chain/${cell.getValue()}`}>
                                                         <p className="font-bold text-blue-600">

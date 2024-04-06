@@ -15,7 +15,7 @@ export const columns: ColumnDef<Action>[] = [
     {
         accessorKey: "chain",
         header: ({ column }) => (
-            <DataTableColumnHeader column={column} title="Chain" />
+            <DataTableColumnHeader column={column} title="Chain" className="md:text-base" />
         ),
         cell: ({ row }) => <div className="w-[80px]">{row.getValue("chain")}</div>,
         enableSorting: false,
