@@ -84,3 +84,10 @@
   }
 
 }
+
+@media (max-width: 767px) {
+  .title-text {
+    white-space: pre-wrap;
+    text-align: left;
+  }
+}
