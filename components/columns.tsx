@@ -73,7 +73,7 @@ export const columns: ColumnDef<Action>[] = [
         ),
         cell: ({ row }) => {
             const amount = parseFloat(row.getValue("eth_transfer_fee_usd"));
-            const displayValue = amount === 0 ? '-' : amount.toFixed(4);
+            const displayValue = amount === 0 ? '-' : amount.toFixed(5);
             return (
                 <div className="max-w-[500px] truncate font-medium">
                     ${displayValue}
